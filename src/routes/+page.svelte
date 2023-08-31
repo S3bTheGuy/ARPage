@@ -1,23 +1,22 @@
 <script lang="ts">
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
-	// import View3D from "@egjs/svelte-view3d";
+	 import View3D from "@egjs/svelte-view3d";
 
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Hjem</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
 <section>
-	<!--- View3D causes erros since it is not SSR compatible.
+	<!-- View3D causes erros since it is not SSR compatible.
 
 	<View3D src="/egjs-view3d/model/draco/alarm.glb"
 			iosSrc="/egjs-view3d/model/usdz/alarm.usdz"
 			webAR={true} />
-
-	--->
+-->
 	<h1>
 		<span class="welcome">
 			<picture>
