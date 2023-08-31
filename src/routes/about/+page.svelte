@@ -7,7 +7,7 @@
 	<h1>Omkring denne side</h1>
 
 	<p>
-		Dette er en hjemmeside designet med ideen om at kunne genkenne plakater gennem en telefons camera og derefter projektere en video på plakaten.
+		Dette er en hjemmeside designet med ideen om at kunne genkende plakater gennem en telefons camera og derefter projektere en video på plakaten.
 	</p>
 
 </div>
