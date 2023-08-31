@@ -1,7 +1,7 @@
 <script lang="ts">
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
-	 import View3D from "@egjs/svelte-view3d";
+	// import View3D from "@egjs/svelte-view3d";
 
 </script>
 
