@@ -29,7 +29,7 @@
 	</main>
 
 	<footer>
-		Lavet af Mikkel M. H. Pedersen & Sebastian F. Steffensen | Ved brug af SvelteKit
+		<p>Lavet af Mikkel M. H. Pedersen & Sebastian F. Steffensen | Ved brug af SvelteKit</p>
 	</footer>
 </div>
 
@@ -52,16 +52,16 @@
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
+        text-align: center;
+        padding: 12px;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+    }
 
-	footer a {
-		font-weight: bold;
-	}
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
 
 	@media (min-width: 480px) {
 		footer {

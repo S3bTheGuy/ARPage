@@ -51,33 +51,33 @@
 		Gotta add some content here
 	</h2>
 
-	<div class="goal-icons-container">
-		<div class="goalArray">
+	<div class="grid-container">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_01} alt="Goal 1" />
 			<img src={E_SDG_Icons_02} alt="Goal 2" />
 			<img src={E_SDG_Icons_03} alt="Goal 3" />
 		</div>
-		<div class="goalArray">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_04} alt="Goal 4" />
 			<img src={E_SDG_Icons_05} alt="Goal 5" />
 			<img src={E_SDG_Icons_06} alt="Goal 6" />
 		</div>
-		<div class="goalArray">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_07} alt="Goal 7" />
 			<img src={E_SDG_Icons_08} alt="Goal 8" />
 			<img src={E_SDG_Icons_09} alt="Goal 9" />
 		</div>
-		<div class="goalArray">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_10} alt="Goal 10" />
 			<img src={E_SDG_Icons_11} alt="Goal 11" />
 			<img src={E_SDG_Icons_12} alt="Goal 12" />
 		</div>
-		<div class="goalArray">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_13} alt="Goal 13" />
 			<img src={E_SDG_Icons_14} alt="Goal 14" />
 			<img src={E_SDG_Icons_15} alt="Goal 15" />
 		</div>
-		<div class="goalArray">
+		<div class="grid-row">
 			<img src={E_SDG_Icons_16} alt="Goal 16" />
 			<img src={E_SDG_Icons_17} alt="Goal 17" />
 			<img src={ZBC_logo} alt="ZBC logo" />
@@ -88,12 +88,12 @@
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.6;
+  }
 
 	h1 {
 		width: 100%;
@@ -115,52 +115,40 @@
 		display: block;
 	}
 
-	.goal-icons-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-		max-width: 100%;
-	}
+	.grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+    }
 
-	.goalArray {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-		max-width: 400px;
-		margin: 0 auto;
-	}
+    .grid-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+        width: 100%;
+    }
 
-	.goalArray img {
-		width: calc(80% - 10px);
-		max-width: 100%;
-		height: auto;
-		margin: 2rem;
-	}
+    .grid-row img {
+        max-width: 100%;
+        height: auto;
+    }
 
-	/* Phone Screens */
-	@media (max-width: 600px) {
-.goal-icons-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
+	/* 
+	for screens larger than 768px wide
+	*/
+    @media screen and (min-width: 768px) {
+        .grid-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
-  .goalArray {
-    flex-direction: column;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .goalArray img {
-    width: calc(100% - 10px);
-    max-width: 100%;
-    height: auto;
-    margin: 1rem;
-  }
-}
-
+        .grid-row {
+            margin: 10px;
+        }
+    }
 </style>
