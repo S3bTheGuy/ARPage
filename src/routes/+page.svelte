@@ -12,10 +12,13 @@
 </svelte:head>
 
 <section>
+	<!--- View3D causes erros since it is not SSR compatible.
+
 	<View3D src="/egjs-view3d/model/draco/alarm.glb"
 			iosSrc="/egjs-view3d/model/usdz/alarm.usdz"
 			webAR={true} />
 
+	--->
 	<h1>
 		<span class="welcome">
 			<picture>
