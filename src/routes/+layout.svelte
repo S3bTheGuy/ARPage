@@ -25,7 +25,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		Lavet af Mikkel M. H. Pedersen & Sebastian F. Steffensen | Ved brug af SvelteKit
 	</footer>
 </div>
 
