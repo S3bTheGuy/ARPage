@@ -19,6 +19,7 @@
 	import E_SDG_Icons_15 from '../lib/images/E_SDG_Icons-15.jpg';
 	import E_SDG_Icons_16 from '../lib/images/E_SDG_Icons-16.jpg';
 	import E_SDG_Icons_17 from '../lib/images/E_SDG_Icons-17.jpg';
+	import ZBC_logo from '../lib/images/ZBC_logo.png';
 
 	// import View3D from "@egjs/svelte-view3d";
 </script>
@@ -79,6 +80,7 @@
 		<div class="goalArray">
 			<img src={E_SDG_Icons_16} alt="Goal 16" />
 			<img src={E_SDG_Icons_17} alt="Goal 17" />
+			<img src={ZBC_logo} alt="ZBC logo" />
 		</div>
 	</div>
 
