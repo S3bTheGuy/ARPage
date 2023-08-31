@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
-	import View3D from "@egjs/svelte-view3d";
+	// import View3D from "@egjs/svelte-view3d";
 
 </script>
 
@@ -27,14 +26,13 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		Lars<br />
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		Gotta add some content here
 	</h2>
 
-	<Counter />
 </section>
 
 <style>
