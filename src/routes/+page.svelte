@@ -141,5 +141,26 @@
 		margin: 2rem;
 	}
 
+	/* Phone Screens */
+	@media (max-width: 600px) {
+.goal-icons-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .goalArray {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .goalArray img {
+    width: calc(100% - 10px);
+    max-width: 100%;
+    height: auto;
+    margin: 1rem;
+  }
+}
 
 </style>
