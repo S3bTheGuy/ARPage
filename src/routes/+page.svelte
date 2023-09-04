@@ -126,6 +126,7 @@
         display: block;
     }
 
+
     .grid-container {
         display: flex;
         flex-direction: column;
