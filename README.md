@@ -1,6 +1,8 @@
 # SvelteKit AR App
 
 Official SvelteKit AR App showcasing the UN's Sustainable Development Goals, through new and exciting methods.
+---
+Demo made for [ZBC](https://www.zbc.dk) by [@Hollow](https://github.com/HollowNumber) & [@S3bTheGuy](https://github.com/S3bTheGuy).
 
 ## prerequisites
 - [pnpm](https://pnpm.io/) 
