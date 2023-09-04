@@ -4,7 +4,8 @@
   "packageManager": "yarn@3.6.3",
   "dependencies": {
     "@egjs/svelte-view3d": "^2.3.1",
-    "@vercel/analytics": "^1.0.2"
+    "@vercel/analytics": "^1.0.2",
+    "esbuild": "^0.19.2"
   },
   "scripts": {
     "dev": "vite dev",
