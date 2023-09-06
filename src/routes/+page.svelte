@@ -20,7 +20,6 @@
     import E_SDG_Icons_16 from '../lib/images/E_SDG_Icons-16.jpg';
     import E_SDG_Icons_17 from '../lib/images/E_SDG_Icons-17.jpg';
 
-    // import View3D from "@egjs/svelte-view3d";
 </script>
 
 <svelte:head>
@@ -29,12 +28,18 @@
 </svelte:head>
 
 <section>
-    <!-- View3D causes erros since it is not SSR compatible.
 
-    <View3D src="/egjs-view3d/model/draco/alarm.glb"
-            iosSrc="/egjs-view3d/model/usdz/alarm.usdz"
-            webAR={true} />
--->
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/dist/mindar-image.aframe.js"></script>
+
+    <a-scene mindar-image="imageTargetSrc: ../lib/targets.mind;">
+
+    </a-scene>
+
+    <a-plane color="blue" opacity="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+
     <h1>
 		<span class="welcome">
 			<picture>
