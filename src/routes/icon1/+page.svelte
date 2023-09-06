@@ -21,12 +21,12 @@
         import { MindARThree } from 'mindar-image-three';
         const mindarThree = new MindARThree({
       container: document.querySelector("#container"),
-      imageTargetSrc: "../../lib/targets.mind"
+      imageTargetSrc: "https://cdn.jsdelivr.net/gh/S3bTheGuy/ARPage@testing/src/lib/targets.mind"
         });
         const {renderer, scene, camera} = mindarThree;
         const anchor = mindarThree.addAnchor(0);
         const geometry = new THREE.PlaneGeometry(1, 0.55);
-        const material = new THREE.MeshBasicMaterial( {color: 0x00ffff, transparent: true, opacity: 1.0} );
+        const material = new THREE.MeshBasicMaterial( {color: 0x00ffff, transparent: true, opacity: 0.5} );
         const plane = new THREE.Mesh( geometry, material );
         anchor.group.add(plane);
         const start = async() => {
