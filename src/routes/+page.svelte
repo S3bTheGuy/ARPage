@@ -20,34 +20,19 @@
     import E_SDG_Icons_16 from '../lib/images/E_SDG_Icons-16.jpg';
     import E_SDG_Icons_17 from '../lib/images/E_SDG_Icons-17.jpg';
 
+
 </script>
 
 <svelte:head>
     <title>Hjem</title>
     <meta name="description" content="Svelte demo app"/>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/dist/mindar-image.aframe.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
 </svelte:head>
 
 <section>
 
-    <a-scene mindar-image="imageTargetSrc: ../lib/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
-        <a-assets>
-            <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.png" />
-            <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-          </a-assets>
-    
-    
-          <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-    
-    
-          <a-entity mindar-image-target="targetIndex: 0">
-            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-            <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-          </a-entity>
-    </a-scene>
     <h1>
 		<span class="welcome">
 			<picture>
@@ -65,7 +50,7 @@
 
     <div class="grid-container">
         <div class="grid-row">
-            <img src={E_SDG_Icons_01} alt="Goal 1"/>
+            <a href="/icon1"><img src={E_SDG_Icons_01} alt="Goal 1"/></a>
             <img src={E_SDG_Icons_02} alt="Goal 2"/>
             <img src={E_SDG_Icons_03} alt="Goal 3"/>
         </div>
@@ -202,4 +187,23 @@
             margin: 0 auto;
         }
     }
+
+    .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
 </style>

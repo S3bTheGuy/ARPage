@@ -5,7 +5,10 @@
   "dependencies": {
     "@egjs/svelte-view3d": "^2.3.1",
     "@vercel/analytics": "^1.0.2",
-    "esbuild": "^0.19.2"
+    "aframe": "^1.4.2",
+    "esbuild": "^0.19.2",
+    "mind-ar": "^1.2.3",
+    "three": "^0.156.1"
   },
   "scripts": {
     "dev": "vite dev",
