@@ -21,7 +21,7 @@
         import { MindARThree } from 'mindar-image-three';
         const mindarThree = new MindARThree({
       container: document.querySelector("#container"),
-      imageTargetSrc: "https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.mind"
+      imageTargetSrc: "../../lib/targets.mind"
         });
         const {renderer, scene, camera} = mindarThree;
         const anchor = mindarThree.addAnchor(0);
