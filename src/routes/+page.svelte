@@ -20,21 +20,19 @@
     import E_SDG_Icons_16 from '../lib/images/E_SDG_Icons-16.jpg';
     import E_SDG_Icons_17 from '../lib/images/E_SDG_Icons-17.jpg';
 
-    // import View3D from "@egjs/svelte-view3d";
+
 </script>
 
 <svelte:head>
     <title>Hjem</title>
     <meta name="description" content="Svelte demo app"/>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
 </svelte:head>
 
 <section>
-    <!-- View3D causes erros since it is not SSR compatible.
 
-    <View3D src="/egjs-view3d/model/draco/alarm.glb"
-            iosSrc="/egjs-view3d/model/usdz/alarm.usdz"
-            webAR={true} />
--->
     <h1>
 		<span class="welcome">
 			<picture>
@@ -52,7 +50,7 @@
 
     <div class="grid-container">
         <div class="grid-row">
-            <img src={E_SDG_Icons_01} alt="Goal 1"/>
+            <a href="/icon1"><img src={E_SDG_Icons_01} alt="Goal 1"/></a>
             <img src={E_SDG_Icons_02} alt="Goal 2"/>
             <img src={E_SDG_Icons_03} alt="Goal 3"/>
         </div>
@@ -79,8 +77,9 @@
         <div class="grid-row">
             <img src={E_SDG_Icons_16} alt="Goal 16"/>
             <img src={E_SDG_Icons_17} alt="Goal 17"/>
+            <div>
             <svg class="logo" version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" x="250px" y="250px" width="300px" height="150px"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="31px"
                  viewBox="0 0 60 31" style="enable-background: new 0 0 60 31;" xml:space="preserve">
 				<polygon class="st1"
                          points="18.7,0.7 0.4,0.7 0.4,8.5 7.1,8.5 0.4,15.5 0.4,30.4 18.7,30.4 18.7,22.6 5,22.6 18.7,8.1 "></polygon>
@@ -92,6 +91,7 @@
                 <path class="st1" d="M52.8,18.4h-0.5c-0.7,2.6-2.9,4.4-5.9,4.4c-2,0-3.6-0.8-4.7-2v9.3c1.5,0.4,3.1,0.7,4.7,0.7
 				  c5.7,0,10.7-2.8,13.4-7.2L52.8,18.4z"></path>
 			  </svg>
+            </div>
         </div>
     </div>
 
@@ -155,6 +155,7 @@
         margin: 0;
     }
 
+    /* logo for phone screens */
     .logo {
         width: 100%;
         height: 100%;
@@ -176,5 +177,33 @@
         .grid-row {
             margin: 10px;
         }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
     }
+
+    .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
 </style>
