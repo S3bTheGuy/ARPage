@@ -26,7 +26,7 @@
   <!-- THE NFT IMAGE USED FOR TRACKING-->
   <a-nft
     type="nft"
-    url="../../lib/no1.fset3"
+    url="/lib/no1"
     smooth="true"
     smoothCount="10"
     smoothTolerance=".01"
@@ -34,7 +34,7 @@
   >
   <!-- DEFINE GLTF Model -->
   <a-entity
-    gltf-model="../../lib/bottleLarge.gltf"
+    gltf-model="/lib/bottleLarge.gltf"
     scale="5 5 5"
     position="50 150 0"
   >
