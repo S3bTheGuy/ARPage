@@ -6,53 +6,43 @@
 	<title>icon1</title>
 	<meta name="description" content="icon1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script async src="https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-      "three": "https://unpkg.com/three@0.153.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.153.0/examples/jsm/",
-      "mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-three.prod.js"
-        }
-      }
-      </script>
-      <script type="module">
-        import * as THREE from 'three';
-        import { MindARThree } from 'mindar-image-three';
-        const mindarThree = new MindARThree({
-      container: document.querySelector("#container"),
-      imageTargetSrc: "https://cdn.jsdelivr.net/gh/S3bTheGuy/ARPage@testing/src/lib/targets.mind"
-        });
-        const {renderer, scene, camera} = mindarThree;
-        const anchor = mindarThree.addAnchor(0);
-        const geometry = new THREE.PlaneGeometry(1, 0.55);
-        const material = new THREE.MeshBasicMaterial( {color: 0x00ffff, transparent: false} );
-        const plane = new THREE.Mesh( geometry, material );
-        anchor.group.add(plane);
-        const start = async() => {
-      await mindarThree.start();
-      renderer.setAnimationLoop(() => {
-        renderer.render(scene, camera);
-      });
-        }
-        const startButton = document.querySelector("#startButton");
-        startButton.addEventListener("click", () => {
-      start();
-        });
-        stopButton.addEventListener("click", () => {
-      mindarThree.stop();
-      mindarThree.renderer.setAnimationLoop(null);
-        });
-      </script>
-</svelte:head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    </svelte:head>
 
 <section>
-  <div id="control">
-    <button id="startButton">Start</button>
-    <button id="stopButton">Stop</button>
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
   </div>
-  <div id="container">
-  </div>
+
+
+  <!--AFRAME SCENE-->
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+  <!-- THE NFT IMAGE USED FOR TRACKING-->
+  <a-nft
+    type="nft"
+    url="../../lib/no1.fset3"
+    smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+  >
+  <!-- DEFINE GLTF Model -->
+  <a-entity
+    gltf-model="../../lib/bottleLarge.gltf"
+    scale="5 5 5"
+    position="50 150 0"
+  >
+  </a-entity>
+  </a-nft>
+  <!-- camera -->
+  <a-entity camera></a-entity>
+  </a-scene>
 </section>
 
 <style>

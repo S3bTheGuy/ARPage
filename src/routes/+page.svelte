@@ -41,11 +41,11 @@
 			</picture>
 		</span>
 
-        Lars<br/>
+        FN's 17 Verdensmål <br/>
     </h1>
 
     <h2>
-        Gotta add some content here
+        Klik på et af målene for at se mere
     </h2>
 
     <div class="grid-container">
